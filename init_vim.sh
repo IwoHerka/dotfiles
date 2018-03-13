@@ -11,7 +11,10 @@ git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/commentary
 # Setup airline.
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 
-# Setup github color-scheme.
-git clone https://github.com/endel/vim-github-colorscheme.git ~/.vim/bundle/github-scheme
+# Setup solarized airline.
+git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
+
+# Setup solarized scheme.
+git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/solarized
 
 # Remember to run :Helptags.
