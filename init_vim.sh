@@ -17,4 +17,7 @@ git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-ai
 # Setup solarized scheme.
 git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/solarized
 
+# Setup nerdtree.
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+
 # Remember to run :Helptags.
