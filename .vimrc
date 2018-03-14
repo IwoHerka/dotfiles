@@ -76,3 +76,8 @@ noremap! <c-l> <right>
 
 " Open NERDTree with F2.
 nnoremap <F2> :NERDTreeToggle<CR>
+
+noremap <c-u> :call smooth_scroll#up(&scroll, 4, 2)<CR>
+noremap <c-d> :call smooth_scroll#down(&scroll, 4, 2)<CR>
+noremap <c-b> :call smooth_scroll#up(&scroll*2, 8, 4)<CR>
+noremap <c-f> :call smooth_scroll#down(&scroll*2, 8, 4)<CR>
