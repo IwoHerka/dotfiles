@@ -1,11 +1,6 @@
-git add --all
+read -p "This action will override all local changes. Proceed? [Y/n] " -n 1 -r
+echo
 
-LANG=C git -c color.status=false status \
-    | sed -n -r -e '1,/Changes to be committed:/ d' \
-    -e '1,1 d' \
-    -e '/^Untracked files:/,$ d' \
-    -e 's/^\s*//' \
-    -e '/./p' \
-    | git commit -F -
-
-git push origin master
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo
+fi
