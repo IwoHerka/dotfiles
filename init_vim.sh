@@ -1,5 +1,5 @@
 # Download .vimrc.
-curl https://raw.githubusercontent.com/IwoHerka/vim/master/.vimrc > ~/.vimrc
+cp ./.vimrc > ~/.vimrc
 
 # Setup pathogen.
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -21,5 +21,9 @@ git clone git://github.com/altercation/vim-colors-solarized.git \
 
 # Setup nerdtree.
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+
+# Setup smooth-scroll.
+git clone https://github.com/terryma/vim-smooth-scroll.git \
+    ~/.vim/bundle/smooth-scroll
 
 # Remember to run :Helptags.
