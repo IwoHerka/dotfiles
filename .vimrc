@@ -1,3 +1,15 @@
+" Enter the current millenium.
+set nocompatible
+
+" Allow recursive searching.
+set path+=**
+
+" Display all matching files when tab-completing.
+set wildmenu
+
+" Compile tags.
+command! MakeTags !ctags -R
+
 " Init pathogen.
 execute pathogen#infect()
 
@@ -5,7 +17,10 @@ execute pathogen#infect()
 set fillchars+=vert:.
 
 " Automatically change directory to current file's directory.
-set autochdir
+" set autochdir
+
+" Highlight search.
+set hlsearch!
 
 " Set hybrid mode.
 set relativenumber
@@ -23,6 +38,9 @@ set expandtab
 
 " 8 spaces in C.
 autocmd filetype c setlocal shiftwidth=8 tabstop=8 expandtab
+
+" Remove whitespaces on save.
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Set filetype events.
 filetype plugin indent on
@@ -45,10 +63,10 @@ highlight EndOfBuffer ctermfg=white ctermbg=white
 " Show tabs with airline.
 let g:airline#extensions#tabline#enabled = 1
 
-""" Mappings
+" {{{ Mappings
 
 " Opposite of <S-j>.
-map <F3> i<CR><Esc> 
+map <F3> i<CR><Esc>
 
 " Tab navigation.
 nnoremap <Tab>l :tabnext<Cr>
@@ -62,7 +80,8 @@ nnoremap <Tab>6 6gt
 nnoremap <Tab>7 7gt
 nnoremap <Tab>8 8gt
 nnoremap <Tab>9 9gt
-nnoremap <Tab>e :tabedit 
+nnoremap <Tab>e :tabedit
+nnoremap <Tab>f :tabfind
 
 " Save one click when opening cmd.
 nnoremap ; :
@@ -81,3 +100,8 @@ noremap <c-u> :call smooth_scroll#up(&scroll, 4, 2)<CR>
 noremap <c-d> :call smooth_scroll#down(&scroll, 4, 2)<CR>
 noremap <c-b> :call smooth_scroll#up(&scroll*2, 8, 4)<CR>
 noremap <c-f> :call smooth_scroll#down(&scroll*2, 8, 4)<CR>
+
+" Toggle highlight search.
+nnoremap <F4> :set hlsearch!<CR>
+
+" }}}
