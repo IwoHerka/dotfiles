@@ -1,6 +1,9 @@
 " Enter the current millenium.
 set nocompatible
 
+" Incremental serach.
+set incsearch
+
 " Allow recursive searching.
 set path+=**
 
@@ -58,12 +61,12 @@ let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
 " Hide tildes.
-highlight EndOfBuffer ctermfg=white ctermbg=white
+" highlight EndOfBuffer ctermfg=white ctermbg=white
 
 " Show tabs with airline.
 let g:airline#extensions#tabline#enabled = 1
 
-" {{{ Mappings
+""" Mappings
 
 " Opposite of <S-j>.
 map <F3> i<CR><Esc>
@@ -104,4 +107,11 @@ noremap <c-f> :call smooth_scroll#down(&scroll*2, 8, 4)<CR>
 " Toggle highlight search.
 nnoremap <F4> :set hlsearch!<CR>
 
-" }}}
+""" Misc
+
+" Setup quick access to manuals.
+command Ref :h reference_toc
+command Usr :h usr_toc
+
+" Number lines in help files.
+autocmd FileType help setlocal number relativenumber

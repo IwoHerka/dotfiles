@@ -1,32 +1,45 @@
 # Download .vimrc.
-cp ./.vimrc > ~/.vimrc
+if [ -e .vimrc ]; then
+    cp .vimrc $HOME/.vimrc
+else
+    curl https://raw.githubusercontent.com/IwoHerka/dotfiles/master/.vimrc \
+        > $HOME/.vimrc
+fi
 
-# Setup pathogen.
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+if [ ! -d $HOME/.vim ]; then
+    mkdir $HOME/.vim
+fi
 
-# Setup commentary.
-git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/commentary
+if [ -d ./bundle ]; then
+    cp -r ./bundle $HOME/.vim
+else
+    # Setup pathogen.
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-# Setup airline.
-git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+    # Setup commentary.
+    git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/commentary
 
-# Setup solarized airline.
-git clone https://github.com/vim-airline/vim-airline-themes \
-    ~/.vim/bundle/vim-airline-themes
+    # Setup airline.
+    git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 
-# Setup solarized scheme.
-git clone git://github.com/altercation/vim-colors-solarized.git \
-    ~/.vim/bundle/solarized
+    # Setup solarized airline.
+    git clone https://github.com/vim-airline/vim-airline-themes \
+        ~/.vim/bundle/vim-airline-themes
 
-# Setup nerdtree.
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+    # Setup solarized scheme.
+    git clone git://github.com/altercation/vim-colors-solarized.git \
+        ~/.vim/bundle/solarized
 
-# Setup smooth-scroll.
-git clone https://github.com/terryma/vim-smooth-scroll.git \
-    ~/.vim/bundle/smooth-scroll
+    # Setup nerdtree.
+    git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
-# Vimroom
-git clone https://github.com/mikewest/vimroom.git ~/.vim/bundle/vimroom
+    # Setup smooth-scroll.
+    git clone https://github.com/terryma/vim-smooth-scroll.git \
+        ~/.vim/bundle/smooth-scroll
+
+    # Vimroom
+    git clone https://github.com/mikewest/vimroom.git ~/.vim/bundle/vimroom
+fi
 
 # Remember to run :Helptags.
