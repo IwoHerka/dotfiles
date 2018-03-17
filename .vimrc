@@ -1,8 +1,11 @@
 " Enter the current millenium.
 set nocompatible
 
-" Incremental serach.
+" Incremental search.
 set incsearch
+
+" Don't wrap lines.
+set nowrap
 
 " Allow recursive searching.
 set path+=**
@@ -20,6 +23,7 @@ execute pathogen#infect()
 set fillchars+=vert:.
 
 " Automatically change directory to current file's directory.
+" We don't want this though together with recursive searching.
 " set autochdir
 
 " Highlight search.
@@ -115,3 +119,9 @@ command Usr :h usr_toc
 
 " Number lines in help files.
 autocmd FileType help setlocal number relativenumber
+
+" Window resizing.
+nnoremap ( :vertical resize -1<CR>
+nnoremap ) :resize -1<CR>
+nnoremap _ :resize +1<CR>
+nnoremap + :vertical resize +1<CR>
