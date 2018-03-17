@@ -1,3 +1,4 @@
+" Test
 " Enter the current millenium.
 set nocompatible
 

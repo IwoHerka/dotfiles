@@ -1,4 +1,9 @@
-# Download .vimrc.
+# This script is used to initialize Vim from scratch.
+# If present, local .vimrc and bundles will be used. Alternatively,
+# config and packages will be downloaded from github repositories.
+# Remember to run :Helptags after initial setup.
+
+# .vimrc.
 if [ -e .vimrc ]; then
     cp .vimrc $HOME/.vimrc
 else
@@ -10,13 +15,17 @@ if [ ! -d $HOME/.vim ]; then
     mkdir $HOME/.vim
 fi
 
-if [ -d ./bundle ]; then
-    cp -r ./bundle $HOME/.vim
-else
+# pathogen's autoload.
+if [ ! -d $HOME/.vim/autoload ]; then
     # Setup pathogen.
-    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    mkdir $HOME/.vim/autoload
+    curl -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
 
+# Packages.
+if [ -d ./bundle ]; then
+    cp -rf ./bundle $HOME/.vim
+else
     # Setup commentary.
     git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/commentary
 
@@ -41,5 +50,3 @@ else
     # Vimroom
     git clone https://github.com/mikewest/vimroom.git ~/.vim/bundle/vimroom
 fi
-
-# Remember to run :Helptags.
