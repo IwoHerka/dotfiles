@@ -1,9 +1,11 @@
-" Test
 " Enter the current millenium.
 set nocompatible
 
 " Incremental search.
 set incsearch
+
+" Automatically load changes.
+set autoread
 
 " Don't wrap lines.
 set nowrap
@@ -13,9 +15,6 @@ set path+=**
 
 " Display all matching files when tab-completing.
 set wildmenu
-
-" Compile tags.
-command! MakeTags !ctags -R
 
 " Init pathogen.
 execute pathogen#infect()
@@ -28,7 +27,7 @@ set fillchars+=vert:.
 " set autochdir
 
 " Highlight search.
-set hlsearch!
+set hlsearch
 
 " Set hybrid mode.
 set relativenumber
@@ -64,6 +63,7 @@ let g:airline_theme='solarized'
 " Change default icons.
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeShowLineNumbers = 1
 
 " Hide tildes.
 " highlight EndOfBuffer ctermfg=white ctermbg=white
@@ -91,6 +91,12 @@ nnoremap <Tab>9 9gt
 nnoremap <Tab>e :tabedit
 nnoremap <Tab>f :tabfind
 
+" Window navigation.
+nnoremap <Esc>l <C-w>l
+nnoremap <Esc>k <C-w>k
+nnoremap <Esc>j <C-w>j
+nnoremap <Esc>h <C-w>h
+
 " Save one click when opening cmd.
 nnoremap ; :
 nnoremap : ;
@@ -114,10 +120,6 @@ nnoremap <F4> :set hlsearch!<CR>
 
 """ Misc
 
-" Setup quick access to manuals.
-command Ref :h reference_toc
-command Usr :h usr_toc
-
 " Number lines in help files.
 autocmd FileType help setlocal number relativenumber
 
@@ -126,3 +128,19 @@ nnoremap ( :vertical resize -1<CR>
 nnoremap ) :resize -1<CR>
 nnoremap _ :resize +1<CR>
 nnoremap + :vertical resize +1<CR>
+
+" Shortcut for zt.
+nnoremap t zt
+
+" For the sake of completeness.
+nnoremap <nowait> <C-[> <C-o>
+
+" Compile tags.
+command! MakeTags !ctags -R
+
+" Open .vimrc
+command Rc :edit ~/.vimrc
+
+" Setup quick access to manuals.
+command Ref :h reference_toc
+command Usr :h usr_toc
