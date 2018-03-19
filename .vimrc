@@ -13,6 +13,12 @@ set nowrap
 " Allow recursive searching.
 set path+=**
 
+" Shot what command is being typed.
+set showcmd
+
+" Ignore some paths in search.
+set wildignore+=*/node_modules/*
+
 " Display all matching files when tab-completing.
 set wildmenu
 
@@ -110,10 +116,10 @@ noremap! <c-l> <right>
 " Open NERDTree with F2.
 nnoremap <F2> :NERDTreeToggle<CR>
 
-noremap <c-u> :call smooth_scroll#up(&scroll, 4, 2)<CR>
-noremap <c-d> :call smooth_scroll#down(&scroll, 4, 2)<CR>
-noremap <c-b> :call smooth_scroll#up(&scroll*2, 8, 4)<CR>
-noremap <c-f> :call smooth_scroll#down(&scroll*2, 8, 4)<CR>
+noremap <c-u> :call smooth_scroll#up(&scroll, 0, 4)<CR>
+noremap <c-d> :call smooth_scroll#down(&scroll, 0, 4)<CR>
+noremap <c-b> :call smooth_scroll#up(&scroll*2, 0, 8)<CR>
+noremap <c-f> :call smooth_scroll#down(&scroll*2, 0, 8)<CR>
 
 " Toggle highlight search.
 nnoremap <F4> :set hlsearch!<CR>
@@ -129,6 +135,9 @@ nnoremap ) :resize -1<CR>
 nnoremap _ :resize +1<CR>
 nnoremap + :vertical resize +1<CR>
 
+" Shortcut for :find.
+nnoremap ff :find
+
 " Shortcut for zt.
 nnoremap t zt
 
@@ -136,11 +145,11 @@ nnoremap t zt
 nnoremap <nowait> <C-[> <C-o>
 
 " Compile tags.
-command! MakeTags !ctags -R
+command! MakeTags !ctags -R --exclude=.git --exclude=node_modules --exclude=assets .
 
 " Open .vimrc
-command Rc :edit ~/.vimrc
+command! Rc :edit ~/.vimrc
 
 " Setup quick access to manuals.
-command Ref :h reference_toc
-command Usr :h usr_toc
+command! Ref :h reference_toc
+command! Usr :h usr_toc
