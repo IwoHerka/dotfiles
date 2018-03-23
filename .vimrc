@@ -146,6 +146,9 @@ nnoremap ff :find
 " Shortcut for zt.
 nnoremap t zt
 
+" Easier to navigate in NERDTree.
+nmap <Space> <CR>
+
 " For the sake of completeness.
 " nnoremap <nowait> <C-[> <C-o>
 
