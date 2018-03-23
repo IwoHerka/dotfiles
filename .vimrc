@@ -18,6 +18,7 @@ set showcmd
 
 " Ignore some paths in search.
 set wildignore+=*/node_modules/*
+set wildignore+=*/__pycache__/*
 
 " Display all matching files when tab-completing.
 set wildmenu
@@ -103,10 +104,10 @@ nnoremap <Tab>e :tabedit
 nnoremap <Tab>f :tabfind
 
 " Window navigation.
-nnoremap <Esc>l <C-w>l
-nnoremap <Esc>k <C-w>k
-nnoremap <Esc>j <C-w>j
-nnoremap <Esc>h <C-w>h
+nnoremap <S-l> <C-w>l
+nnoremap <S-k> <C-w>k
+nnoremap <S-j> <C-w>j
+nnoremap <S-h> <C-w>h
 
 " Save one click when opening cmd.
 nnoremap ; :
@@ -120,11 +121,6 @@ noremap! <c-l> <right>
 
 " Open NERDTree with F2.
 nnoremap <F2> :NERDTreeToggle<CR>
-
-noremap <c-u> :call smooth_scroll#up(&scroll, 0, 4)<CR>
-noremap <c-d> :call smooth_scroll#down(&scroll, 0, 4)<CR>
-noremap <c-b> :call smooth_scroll#up(&scroll*2, 0, 8)<CR>
-noremap <c-f> :call smooth_scroll#down(&scroll*2, 0, 8)<CR>
 
 " Toggle highlight search.
 nnoremap <F4> :set hlsearch!<CR>
