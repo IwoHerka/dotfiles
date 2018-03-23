@@ -12,3 +12,5 @@ if [ -e "~/.init_git.sh" ]; then
 else
     echo ".init_git.sh not found; skipping."
 fi
+
+eval $(ssh-agent)
