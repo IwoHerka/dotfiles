@@ -4,9 +4,8 @@
 
 CWD=$HOME
 DIR=$CWD/dotfiles/linked
-
-
 BAKDIR=$CWD/dotfiles.bak
+
 DIRPATH=$((${#DIR}+2))
 ARRAY=(); for file in $DIR/{.??,}*; do ARRAY+=("${file:DIRPATH}"); done
 FILES=$(printf " %s" "${ARRAY[@]}")
