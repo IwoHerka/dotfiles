@@ -15,3 +15,7 @@ alias src='source'
 
 alias gits='git status'
 alias gitp='git push'
+
+# Python
+
+alias env='source env/bin/activate'
