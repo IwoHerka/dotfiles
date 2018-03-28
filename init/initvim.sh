@@ -42,11 +42,4 @@ else
 
     # Setup nerdtree.
     git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-
-    # Setup smooth-scroll.
-    git clone https://github.com/terryma/vim-smooth-scroll.git \
-        ~/.vim/bundle/smooth-scroll
-
-    # Vimroom
-    git clone https://github.com/mikewest/vimroom.git ~/.vim/bundle/vimroom
 fi
