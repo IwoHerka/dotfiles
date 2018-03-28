@@ -113,6 +113,10 @@ nnoremap <S-h> <C-w>h
 nnoremap ; :
 nnoremap : ;
 
+nnoremap cc "*
+nnoremap cv "*p
+nnoremap cV "*P
+
 " Faster then moving with arrow keys.
 noremap! <c-k> <up>
 noremap! <c-j> <down>
