@@ -129,6 +129,9 @@ nnoremap <F2> :NERDTreeToggle<CR>
 " Toggle highlight search.
 nnoremap <F4> :set hlsearch!<CR>
 
+" Open CtrlP
+nnoremap <C-p> :CtrlP<Cr>
+
 """ Misc
 
 " Number lines in help files.
