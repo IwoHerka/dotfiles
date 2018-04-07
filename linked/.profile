@@ -5,6 +5,7 @@ alias dot='cd ~/dotfiles'
 alias dow='cd ~/Downloads'
 alias doc='cd ~/Documents'
 alias et='cd ~/Code/etude'
+alias wed='cd ~/Code/wedsite'
 
 # Command shortcuts
 
