@@ -10,6 +10,7 @@ alias wed='cd ~/Code/wedsite'
 # Command shortcuts
 
 alias src='source'
+alias ll='ls -1a'
 
 # Git shortcuts
 
