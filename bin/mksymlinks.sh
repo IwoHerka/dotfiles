@@ -1,16 +1,14 @@
 #!/bin/bash
 
-# Variables
-
 CWD=$HOME
-DIR=$CWD/dotfiles/linked
+LINKED=$CWD/dotfiles/linked
 BAKDIR=$CWD/dotfiles.bak
 
-DIRPATH=$((${#DIR}+2))
-ARRAY=(); for file in $DIR/{.??,}*; do ARRAY+=("${file:DIRPATH}"); done
+DIRPATH=$((${#LINKED}+2))
+ARRAY=(); for file in $LINKED/{.??,}*; do ARRAY+=("${file:DIRPATH}"); done
 FILES=$(printf " %s" "${ARRAY[@]}")
 
-echo 'Home directory: '   $DIR
+echo 'Home directory: '   $LINKED
 echo 'Backup directory: ' $BAKDIR
 echo 'Detected files: '   $FILES
 
@@ -33,7 +31,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     for file in $FILES; do
         echo ".$file"
-        ln -s $DIR/.$file $CWD/.$file
+        ln -s $LINKED/.$file $CWD/.$file
     done
 
     echo "...done"
