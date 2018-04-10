@@ -23,23 +23,26 @@ def walktree(top, callback):
             print('Skipping {}'.format(pathname))
 
 
-def linkdot(f):
-    pathname = '{}.{}'.format(HOME, name(f))
-    print(name(f) + ' -> ' + pathname)
+def remove(pathname):
     if os.path.exists(pathname):
         os.remove(pathname)
+    elif os.path.islink(pathname):
+        os.unlink(pathname)
     elif not os.path.exists(pathname.replace(name(f), '')):
         os.makedirs(pathname.replace(name(f), ''))
+
+
+def linkdot(f):
+    pathname = '{}.{}'.format(HOME, name(f))
+    print(f + ' -> ' + pathname)
+    remove(pathname)
     os.symlink(f, pathname)
 
 
 def linkconf(f):
     pathname = HOME + '.' + f.replace(DOTDIR, '')
     print(name(f) + ' -> ' + pathname)
-    if os.path.exists(pathname):
-        os.remove(pathname)
-    elif not os.path.exists(pathname.replace(name(f), '')):
-        os.makedirs(pathname.replace(name(f), ''))
+    remove(pathname)
     os.symlink(f, pathname)
 
 
