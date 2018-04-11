@@ -28,8 +28,8 @@ def remove(pathname):
         os.remove(pathname)
     elif os.path.islink(pathname):
         os.unlink(pathname)
-    elif not os.path.exists(pathname.replace(name(f), '')):
-        os.makedirs(pathname.replace(name(f), ''))
+    elif not os.path.exists(pathname.replace(name(pathname), '')):
+        os.makedirs(pathname.replace(name(pathname), ''))
 
 
 def linkdot(f):
