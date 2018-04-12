@@ -109,7 +109,11 @@ nnoremap <S-k> <C-w>k
 nnoremap <S-j> <C-w>j
 nnoremap <S-h> <C-w>h
 
-" Save one click when opening cmd.
+" o and O but without enterint Insert mode.
+nmap <CR> o<Esc>
+nmap <BS> o<Esc>k
+
+" Sav> one click when opening cmd.
 nnoremap ; :
 nnoremap : ;
 
