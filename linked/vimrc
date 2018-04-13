@@ -110,7 +110,6 @@ nnoremap <S-j> <C-w>j
 nnoremap <S-h> <C-w>h
 
 " o and O but without enterint Insert mode.
-nmap <CR> o<Esc>
 nmap <BS> o<Esc>k
 
 " Sav> one click when opening cmd.
@@ -129,6 +128,11 @@ noremap! <c-l> <right>
 
 " Open NERDTree with F2.
 nnoremap <F2> :NERDTreeToggle<CR>
+
+" Nagivating quickfix window.
+nnoremap <c-n> :cprev<cr>
+nnoremap <c-m> :cnext<cr>
+nnoremap <c-f> :grep -RF '
 
 " Toggle highlight search.
 nnoremap <F4> :set hlsearch!<CR>
@@ -156,9 +160,6 @@ nnoremap t zt
 " Easier to navigate in NERDTree.
 nmap <Space> <CR>
 
-" For the sake of completeness.
-" nnoremap <nowait> <C-[> <C-o>
-
 " Compile tags.
 command! MakeTags !ctags -R --exclude=.git --exclude=node_modules --exclude=assets .
 
@@ -170,7 +171,6 @@ command! Ref :h reference_toc
 command! Usr :h usr_toc
 
 """ Scripts
-
 
 " BufOnly.vim  -  Delete all the buffers except the current/named buffer.
 "
