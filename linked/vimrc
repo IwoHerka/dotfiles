@@ -109,6 +109,9 @@ nnoremap <S-k> <C-w>k
 nnoremap <S-j> <C-w>j
 nnoremap <S-h> <C-w>h
 
+nnoremap ed i<Cr><Esc>
+nnoremap eu ^d0i<Bs><Esc>
+
 " o and O but without enterint Insert mode.
 nmap <BS> o<Esc>k
 
