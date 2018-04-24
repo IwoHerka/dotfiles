@@ -106,6 +106,22 @@ c.colors.prompts.selected.bg = xresources['*color7']
 c.colors.downloads.bar.bg = xresources['*color7']
 
 # Keybindings
+
+# Rebind Alt to Mod4 (Windows). Alt is used by i3.
+config.bind('<Mod4-1>', 'tab-focus 1', mode='normal')
+config.bind('<Mod4-2>', 'tab-focus 2', mode='normal')
+config.bind('<Mod4-3>', 'tab-focus 3', mode='normal')
+config.bind('<Mod4-4>', 'tab-focus 4', mode='normal')
+config.bind('<Mod4-5>', 'tab-focus 5', mode='normal')
+config.bind('<Mod4-6>', 'tab-focus 6', mode='normal')
+config.bind('<Mod4-7>', 'tab-focus 7', mode='normal')
+config.bind('<Mod4-8>', 'tab-focus 8', mode='normal')
+config.bind('<Mod4-9>', 'tab-focus 9', mode='normal')
+
+# Switch : with ;.
+config.bind(';', 'set-cmd-text :', mode='normal')
+config.bind(':', 'hint images tab', mode='normal')
+
 config.bind(';x', 'spawn nohup mpv {url}', mode='normal')
 config.bind(';X', 'hint links spawn nohup mpv {hint-url}')
 config.bind('<Ctrl+j>', 'completion-item-focus next', mode='command')
