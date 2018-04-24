@@ -21,3 +21,5 @@ alias gitp='git push'
 
 alias m='python manage.py'
 alias env='source env/bin/activate'
+
+source ~/.profile_local
