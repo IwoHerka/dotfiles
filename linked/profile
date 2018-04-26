@@ -11,6 +11,7 @@ alias wed='cd ~/Code/wedsite'
 
 alias src='source'
 alias ll='ls -1a'
+alias prf='source ~/.profile'
 
 # Git shortcuts
 
