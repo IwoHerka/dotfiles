@@ -143,6 +143,12 @@ nnoremap <F4> :set hlsearch!<CR>
 " Open CtrlP
 nnoremap <C-p> :CtrlP<Cr>
 
+" Replace helper.
+" nnoremap <C-r> :%s/
+
+nnoremap <C-x> :vsplit<Cr>
+nnoremap <S-x> :split<Cr>
+
 """ Misc
 
 " Number lines in help files.

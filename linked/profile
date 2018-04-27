@@ -11,6 +11,7 @@ alias wed='cd ~/Code/wedsite'
 
 alias src='source'
 alias ll='ls -1a'
+alias prf='source ~/.profile'
 
 # Git shortcuts
 
@@ -21,3 +22,5 @@ alias gitp='git push'
 
 alias m='python manage.py'
 alias env='source env/bin/activate'
+
+source ~/.profile_local
