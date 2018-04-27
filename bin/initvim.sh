@@ -3,14 +3,6 @@
 # config and packages will be downloaded from github repositories.
 # Remember to run :Helptags after initial setup.
 
-# .vimrc.
-if [ -e .vimrc ]; then
-    cp .vimrc $HOME/.vimrc
-else
-    curl https://raw.githubusercontent.com/IwoHerka/dotfiles/master/.vimrc \
-        > $HOME/.vimrc
-fi
-
 if [ ! -d $HOME/.vim ]; then
     mkdir $HOME/.vim
 fi
