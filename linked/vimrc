@@ -77,6 +77,13 @@ let g:NERDTreeShowLineNumbers = 1
 let g:NERDTreeMinimalUI = 1
 let NERDTreeIgnore=['\~$', '\.pyc$', '__pycache__']
 
+" Quit NERDTree on quitting Vim
+autocmd VimLeave * NERDTreeClose
+autocmd VimLeave * mksession! session.vim
+
+" Restore NERDTree on starting Vim
+autocmd VimEnter * NERDTree
+
 " Hide tildes.
 " highlight EndOfBuffer ctermfg=white ctermbg=white
 
