@@ -4,3 +4,4 @@ xmodmap ~/.Xmodmap
 xrdb ~/.Xresources
 eval $(ssh-agent)
 eval i3
+source ~/.xprofile_local
