@@ -5,7 +5,7 @@
 [._]sw[a-p]
 
 # Session
-Session.vim
+*.vim
 
 # Temporary
 .netrwhist
