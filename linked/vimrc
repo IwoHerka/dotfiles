@@ -101,6 +101,9 @@ let g:airline#extensions#tabline#enabled = 1
 " Opposite of <S-j>.
 map <F3> i<CR><Esc>
 
+" Quick-save and exit
+nnoremap Q :wqa<Cr>
+
 " Tab navigation.
 nnoremap <Tab>l :tabnext<Cr>
 nnoremap <Tab>h :tabprevious<Cr>
