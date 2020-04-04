@@ -1,0 +1,13 @@
+URxvt.font: xft:SF Mono:pixelsize=16
+! URxvt.font: xft:Menlo for Powerline:pixelsize=16
+/*URxvt.font: xft:Fixedsys Excelsior:pixelsize=16*/
+URxvt.scrollBar: false
+
+/* URxvt*inheritPixmap: true */
+/* URxvt*transparent: true */
+
+! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
+/* URxvt*shading: 100 */
+/* URxvt*internalBorder: 0 */
+/* URxvt*externalBorder: 5 */
+/* URxvt*borderColor: #383838 */

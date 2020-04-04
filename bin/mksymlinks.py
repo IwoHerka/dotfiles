@@ -34,16 +34,16 @@ def remove(pathname):
 
 def linkdot(f):
     pathname = '{}.{}'.format(HOME, name(f))
-    print(f + ' -> ' + pathname)
-    remove(pathname)
-    os.symlink(f, pathname)
+    print(name(f) + ' -> ' + pathname)
+    # remove(pathname)
+    # os.symlink(f, pathname)
 
 
 def linkconf(f):
     pathname = HOME + '.' + f.replace(DOTDIR, '')
     print(name(f) + ' -> ' + pathname)
-    remove(pathname)
-    os.symlink(f, pathname)
+    # remove(pathname)
+    # os.symlink(f, pathname)
 
 
 if __name__ == '__main__':
