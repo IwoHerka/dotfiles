@@ -1,4 +1,3 @@
-export TERM=rxvt-256color           # Set terminal type.
 setxkbmap -option caps:escape       # Map CapsLock to Escape.
 setxkbmap pl                        # Set Polish.
 xrdb ~/.Xresources                  # Load X-resources.

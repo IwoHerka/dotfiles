@@ -1,0 +1,2 @@
+export MESA_LOADER_DRIVER_OVERRIDE=i965
+export TERM=rxvt-256color           # Set terminal type.

@@ -36,3 +36,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     echo "...done"
 fi
+
+
+git clone https://github.com/sos4nt/dynamic-colors ~/.dynamic-colors
