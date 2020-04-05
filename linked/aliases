@@ -1,0 +1,20 @@
+# Navigation
+
+alias C='cd ~/C'
+alias D='cd ~/D'
+alias T='cd ~/T'
+alias P='cd ~/P'
+alias V='cd ~/V'
+
+# Projects
+
+alias lem='cd ~/C/Lem'
+alias tomtom='cd ~/C/tomtom-moma-android-v2'
+
+# Wifi
+
+alias wifi='wicd-client'
+
+# Colors
+
+alias color='dynamic-colors cycle'

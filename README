@@ -12,28 +12,14 @@ This will read `git status` and commit with simple message from `gitmsg`.
 Fonts
 -----
 
-./init/initfonts.sh
+./bin/initfonts.sh
 
 This will download and copy FantasqueSansMono to ~/.fonts.
-
-Vim
----
-
-./init/initvim.sh
-
-Sets up Vim from scratch. Read script for details.
 
 Symlinked config files
 ----------------------
 
-./init/mksymlinks.sh
+python ~/dotfiles/bin/mksymlinks.py
 
 This script will create symlink for every file in linked/ directory in the
-home directory. Old files are moved to ~/dotfiles.bak.
-
-Suckless terminal
------------------
-
-cd st-0.8.1
-git apply patches/*
-sudo make clean install
+home directory.
