@@ -1,4 +1,4 @@
-URxvt.font: xft:SF Mono:pixelsize=16
+URxvt.font: xft:Fira Code:pixelsize=16
 ! URxvt.font: xft:Menlo for Powerline:pixelsize=16
 /*URxvt.font: xft:Fixedsys Excelsior:pixelsize=16*/
 URxvt.scrollBar: false
